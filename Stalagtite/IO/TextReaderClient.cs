@@ -160,11 +160,12 @@ namespace Stalagtite.IO
             Dispose(true);
         }
 
-        public virtual void Dispose(bool disposing)
+        protected virtual void Dispose(bool disposing)
         {
             if(disposing)
             {
                 _token.Cancel();
+                _token.Dispose();
 
                 if (_textWriter != null)
                 {

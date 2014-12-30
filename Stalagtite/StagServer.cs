@@ -1,13 +1,8 @@
-﻿using Stalagtite.Actions;
-using Stalagtite.Parsing;
-using Stalagtite.Game;
-using Stalagtite.IO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Stalagtite
@@ -42,8 +37,7 @@ namespace Stalagtite
                 int sleepTime = (60 / _ticksPerMinute) * 1000;
                 Tick();
                 _liveTickCount++;
-                Task.Delay(sleepTime);
-                //Thread.Sleep(sleepTime);
+                Task.Delay(sleepTime).Wait();
             }
         }
 

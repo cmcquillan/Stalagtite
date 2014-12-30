@@ -14,6 +14,7 @@ namespace Stalagtite.Game
         private GameObject _parent;
         private GameState _state;
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors", Justification = "This is the intended function of the base class.")]
         protected GameObject(GameState state)
         {
             _state = state;
