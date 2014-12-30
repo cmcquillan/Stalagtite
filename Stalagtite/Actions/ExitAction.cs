@@ -13,8 +13,7 @@ namespace Stalagtite.Actions
 
         public override ActionType ActionType
         {
-            get { return Actions.ActionType.PlayerAction
-                & Actions.ActionType.EmptyClientAction; }
+            get { return Actions.ActionType.AllClientAction; }
         }
 
         public override void Execute()

@@ -164,8 +164,11 @@ namespace Stalagtite.IO
         {
             if(disposing)
             {
-                _token.Cancel();
-                _token.Dispose();
+                if (!_isDisposed)
+                {
+                    _token.Cancel();
+                    _token.Dispose();
+                }
 
                 if (_textWriter != null)
                 {

@@ -19,7 +19,8 @@ namespace Stalagtite.Actions
 
         AreaAction = WorldAction | RoomAction,
         EnvironmentAction = AreaAction | GameAction,
-
+        AllClientAction = EmptyClientAction | PlayerAction,
+        
         AllAction = Int32.MaxValue,
     }
 }
